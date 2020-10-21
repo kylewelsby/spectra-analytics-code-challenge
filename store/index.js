@@ -9,12 +9,13 @@ export const mutations = {
 
 export const actions = {
   async fetchCategories({ commit, state }) {
-    const docs = await this.$content('/', { deep: true })
-      .only(['title', 'menuTitle', 'category', 'slug', 'to', 'duration'])
+    const docs = await this.$content('guide')
+      .only(['title', 'menuTitle', 'category', 'slug', 'path', 'duration'])
       .sortBy('position', 'asc')
       .fetch()
     const categories = groupBy(docs, 'category')
     delete categories[undefined]
+    console.log(categories)
     commit('SET_CATEGORIES', categories)
   },
 }

@@ -14,7 +14,7 @@
             :key="doc.slug"
             class="text-gray-700 dark:text-gray-300"
           >
-            <NuxtLink :to="doc" class="flex flex-row items-center py-1">
+            <NuxtLink :to="doc.path" class="flex flex-row items-center py-1">
               <span class="flex-grow">{{ doc.menuTitle || doc.title }}</span>
               <small class="text-xs whitespace-no-wrap">({{formatDuration(doc.duration)}})</small>
             </NuxtLink>
