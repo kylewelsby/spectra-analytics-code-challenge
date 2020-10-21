@@ -15,7 +15,6 @@ export const actions = {
       .fetch()
     const categories = groupBy(docs, 'category')
     delete categories[undefined]
-    console.log(categories)
     commit('SET_CATEGORIES', categories)
   },
 }

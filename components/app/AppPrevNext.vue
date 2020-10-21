@@ -1,10 +1,10 @@
 <template>
   <div class="flex flex-row">
     <div class="flex-grow">
-      <NuxtLink v-if="prev" :to="prev" class="text-blue-500 font-medium underline">Previous video | {{ prev.title }}</NuxtLink>
+      <NuxtLink v-if="prev" :to="prev.path" class="text-blue-500 font-medium underline">Previous video | {{ prev.title }}</NuxtLink>
     </div>
     <div class="flex-grow text-right">
-      <NuxtLink v-if="next" :to="next" class="text-blue-500 font-medium underline">Next video | {{ next.title }}</NuxtLink>
+      <NuxtLink v-if="next" :to="next.path" class="text-blue-500 font-medium underline">Next video | {{ next.title }}</NuxtLink>
     </div>
   </div>
 </template>
