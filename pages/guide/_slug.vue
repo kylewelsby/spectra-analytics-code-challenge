@@ -46,7 +46,7 @@ export default {
       return error({ statusCode: 404, message: 'Page not found' })
     }
     const [prev, next] = await $content('guide', { deep: true })
-      .only(['title', 'slug', 'to'])
+      .only(['title', 'slug', 'path'])
       .sortBy('position', 'asc')
       .surround(slug, { before: 1, after: 1 })
       .fetch()
