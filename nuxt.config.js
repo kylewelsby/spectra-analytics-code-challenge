@@ -4,6 +4,9 @@ export default {
 
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
+  router: {
+    base: process.env.BASE_URL || '/'
+  },
   generate: {
     fallback: '404.html',
     routes: ['/']
